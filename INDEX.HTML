@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Educação Financeira - Quiz Interativo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <h1>💰 Educação Financeira</h1>
+            <p>Quiz Interativo — Tecnologia e Consciência</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- APRESENTAÇÃO -->
+        <section id="inicio" class="tela">
+            <div class="card apresentacao">
+
+                <div class="icone">💰</div>
+
+                <h2>Quiz de Educação Financeira</h2>
+
+                <p>
+                    Você sabe administrar seu dinheiro de forma consciente?
+                    Teste seus conhecimentos sobre planejamento financeiro,
+                    consumo consciente, poupança, crédito e endividamento.
+                </p>
+
+                <div class="informacoes">
+                    <div>
+                        <strong>10</strong>
+                        <span>Perguntas</span>
+                    </div>
+
+                    <div>
+                        <strong>4</strong>
+                        <span>Alternativas</span>
+                    </div>
+
+                    <div>
+                        <strong>1</strong>
+                        <span>Resposta correta</span>
+                    </div>
+                </div>
+
+                <button id="btnIniciar" class="btn principal">
+                    Começar Quiz 🚀
+                </button>
+
+            </div>
+
+            <div class="card sobre">
+                <h3>🎯 Por que este projeto?</h3>
+
+                <p>
+                    A educação financeira ajuda as pessoas a tomar decisões
+                    mais conscientes sobre o uso do dinheiro. Este quiz utiliza
+                    a tecnologia como ferramenta de informação e conscientização.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- QUIZ -->
+        <section id="quiz" class="tela escondido">
+
+            <div class="quiz-topo">
+
+                <div>
+                    <span id="numeroPergunta">Pergunta 1 de 10</span>
+                </div>
+
+                <div>
+                    <span id="pontuacao">Pontuação: 0</span>
+                </div>
+
+            </div>
+
+            <!-- BARRA DE PROGRESSO -->
+            <div class="barra-container">
+                <div id="barraProgresso" class="barra-progresso"></div>
+            </div>
+
+
+            <div class="card pergunta-card">
+
+                <h2 id="pergunta">
+                    Pergunta aparecerá aqui
+                </h2>
+
+                <div id="alternativas" class="alternativas">
+                    <!-- As alternativas serão inseridas pelo JavaScript -->
+                </div>
+
+                <div id="feedback" class="feedback escondido">
+
+                    <h3 id="feedbackTitulo"></h3>
+
+                    <p id="feedbackTexto"></p>
+
+                </div>
+
+                <button id="btnProxima" class="btn principal escondido">
+                    Próxima pergunta →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section id="resultado" class="tela escondido">
+
+            <div class="card resultado-card">
+
+                <div class="icone">🏆</div>
+
+                <h2>Quiz finalizado!</h2>
+
+                <p class="resultado-frase">
+                    Sua pontuação foi:
+                </p>
+
+                <div id="pontuacaoFinal" class="pontuacao-final">
+                    0/10
+                </div>
+
+                <div class="resultado-barra-container">
+                    <div id="resultadoBarra" class="resultado-barra"></div>
+                </div>
+
+                <h3 id="mensagemResultado">
+                    Resultado
+                </h3>
+
+                <p id="explicacaoResultado">
+                    Explicação do resultado.
+                </p>
+
+                <div class="resultado-info">
+
+                    <div>
+                        <span>Acertos</span>
+                        <strong id="acertos">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Erros</span>
+                        <strong id="erros">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Percentual</span>
+                        <strong id="percentual">0%</strong>
+                    </div>
+
+                </div>
+
+                <button id="btnReiniciar" class="btn principal">
+                    🔄 Reiniciar Quiz
+                </button>
+
+            </div>
+
+
+            <div class="card intervencao">
+
+                <h3>🌎 Nossa contribuição para a sociedade</h3>
+
+                <p>
+                    Nosso quiz utiliza a tecnologia para promover educação
+                    financeira e conscientização. Através de perguntas
+                    interativas, buscamos ajudar as pessoas a compreender
+                    melhor temas como planejamento, consumo consciente,
+                    poupança, crédito e endividamento.
+                </p>
+
+                <p>
+                    Dessa forma, a programação pode ser utilizada para
+                    compartilhar informações e incentivar decisões mais
+                    conscientes, responsáveis e consequentes.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Projeto Quiz Interativo — Tecnologia e Consciência
+        </p>
+
+        <p>
+            Tema: Educação Financeira
+        </p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
