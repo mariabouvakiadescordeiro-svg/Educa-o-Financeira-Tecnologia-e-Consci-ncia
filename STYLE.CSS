@@ -1,0 +1,465 @@
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f5f7fa);
+    color: #263238;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+.cabecalho {
+    background: linear-gradient(135deg, #087f5b, #0ca678);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cabecalho h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.cabecalho p {
+    font-size: 18px;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* ================================
+   TELAS
+================================ */
+
+.tela {
+    margin: 40px 0;
+}
+
+.escondido {
+    display: none !important;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================================
+   APRESENTAÇÃO
+================================ */
+
+.apresentacao {
+    text-align: center;
+}
+
+.icone {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.apresentacao h2 {
+    color: #087f5b;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.apresentacao p {
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   INFORMAÇÕES
+================================ */
+
+.informacoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.informacoes div {
+    background: #e8f5e9;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 130px;
+}
+
+.informacoes strong {
+    display: block;
+    font-size: 30px;
+    color: #087f5b;
+}
+
+.informacoes span {
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* ================================
+   SOBRE
+================================ */
+
+.sobre h3,
+.intervencao h3 {
+    color: #087f5b;
+    margin-bottom: 15px;
+}
+
+.sobre p,
+.intervencao p {
+    line-height: 1.7;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.principal {
+    background: #087f5b;
+    color: white;
+}
+
+.btn.principal:hover {
+    background: #065f46;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   TOPO DO QUIZ
+================================ */
+
+.quiz-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-topo span {
+    font-weight: bold;
+    color: #087f5b;
+}
+
+
+/* ================================
+   BARRA DE PROGRESSO
+================================ */
+
+.barra-container {
+    width: 100%;
+    height: 12px;
+    background-color: #dfe6e9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.barra-progresso {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #087f5b, #20c997);
+    transition: width 0.4s ease;
+}
+
+
+/* ================================
+   PERGUNTA
+================================ */
+
+.pergunta-card h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   ALTERNATIVAS
+================================ */
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alternativa {
+    width: 100%;
+    padding: 17px 20px;
+    border: 2px solid #dfe6e9;
+    background: #ffffff;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.alternativa:hover {
+    border-color: #0ca678;
+    background-color: #f0fff8;
+    transform: translateX(4px);
+}
+
+.alternativa:disabled {
+    cursor: default;
+}
+
+
+/* ================================
+   ESTADOS DAS ALTERNATIVAS
+================================ */
+
+.alternativa.correta {
+    background-color: #d3f9d8;
+    border-color: #2b8a3e;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.alternativa.incorreta {
+    background-color: #ffe3e3;
+    border-color: #c92a2a;
+    color: #8a1c1c;
+    font-weight: bold;
+}
+
+
+/* ================================
+   FEEDBACK
+================================ */
+
+.feedback {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.feedback.acerto {
+    background-color: #d3f9d8;
+    border-left: 6px solid #2b8a3e;
+}
+
+.feedback.erro {
+    background-color: #ffe3e3;
+    border-left: 6px solid #c92a2a;
+}
+
+.feedback h3 {
+    margin-bottom: 10px;
+}
+
+.feedback p {
+    line-height: 1.6;
+}
+
+
+/* ================================
+   BOTÃO PRÓXIMA
+================================ */
+
+#btnProxima {
+    margin-top: 25px;
+}
+
+
+/* ================================
+   RESULTADO
+================================ */
+
+.resultado-card {
+    text-align: center;
+}
+
+.resultado-card h2 {
+    color: #087f5b;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.resultado-frase {
+    font-size: 18px;
+}
+
+.pontuacao-final {
+    font-size: 60px;
+    font-weight: bold;
+    color: #087f5b;
+    margin: 15px 0;
+}
+
+
+/* ================================
+   BARRA DO RESULTADO
+================================ */
+
+.resultado-barra-container {
+    width: 100%;
+    height: 20px;
+    background: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 25px 0;
+}
+
+.resultado-barra {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #087f5b, #20c997);
+    transition: width 1s ease;
+}
+
+
+/* ================================
+   RESULTADO INFO
+================================ */
+
+.resultado-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.resultado-info div {
+    background-color: #f1f3f5;
+    padding: 18px 25px;
+    border-radius: 12px;
+    min-width: 120px;
+}
+
+.resultado-info span {
+    display: block;
+    color: #555;
+}
+
+.resultado-info strong {
+    display: block;
+    font-size: 28px;
+    color: #087f5b;
+    margin-top: 5px;
+}
+
+
+/* ================================
+   INTERVENÇÃO
+================================ */
+
+.intervencao {
+    border-top: 5px solid #087f5b;
+}
+
+.intervencao p {
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   RODAPÉ
+================================ */
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    background: #263238;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 600px) {
+
+    .cabecalho h1 {
+        font-size: 28px;
+    }
+
+    .cabecalho p {
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .pergunta-card h2 {
+        font-size: 20px;
+    }
+
+    .quiz-topo {
+        font-size: 14px;
+    }
+
+    .informacoes {
+        flex-direction: column;
+    }
+
+    .informacoes div {
+        width: 100%;
+    }
+
+    .pontuacao-final {
+        font-size: 48px;
+    }
+}
